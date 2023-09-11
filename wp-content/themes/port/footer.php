@@ -1,32 +1,18 @@
 <footer class="footer">
-  <div class="container">
-    <div class="footer__content">
-      <div class="footer__social" id="down">
-        <a class="footer__image" href="">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/img/sprite.svg#twit"></use>
-          </svg>
-        </a>
-        <a class="footer__image" href="">
-        <svg>
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/img/svg/sprite.svg#vk"></use>
-        </svg>
-      </a>
-      <a class="footer__image" href="">
-          <svg>
-            <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/img/svg/what.svg"></use>
-          </svg>
-        </a>
-      </div>
-      <h2 class="footer__title">2018 Burrito Chili-Bar</h2>
-      <h3 class="footer__subtitle">Website built at The Building Block</h3>
-      <span class="footer__info">Terms&PrivacyPolicyReserveNow</span>
-    </div>
-
+  <div class="container footer__container">
+    <div class="footer__address-block"><span class="footer__address"><a href="https://t.me/MarinaAlferova23">MarinaAlferova</a></span></div>
+    <ul class="list-reset social">
+      <li class="social__item"><a href="https://t.me/MarinaAlferova23" class="social__link"><svg>
+        <use xlink:href="img/sprite.svg#telegram"></use>
+      </svg></a></li>
+      <li class="social__item"><a href=" https://wa.me/79201923888" class="social__link"><svg>
+        <use xlink:href="img/sprite.svg#what"></use>
+      </svg></a></li>
+      <li class="social__item"><a href="https://vk.com/id51995200" class="social__link"><svg>
+        <use xlink:href="img/sprite.svg#vk"></use>
+      </svg></a></li>
+    </ul>
   </div>
 </footer>
-<?php
-wp_footer();
-?>
-</body>
-</html>
+<?php 
+wp_footer(); ?>
