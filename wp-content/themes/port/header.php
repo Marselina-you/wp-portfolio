@@ -1,6 +1,7 @@
-<!DOCTYPE html><html lang="ru" class="page">
+<!DOCTYPE html><html <?php language_attributes();?>>
 	<head>
-		<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="<?php bloginfo('charset');?>">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"><meta name="theme-color" content="#111111">
 		<title>Alferova-web - разработка сайтов, верстка сайтов HTML, CSS</title>
     <meta name="desciption" content="Адаптивная верстка сайтов по макету">
@@ -11,14 +12,16 @@
     <meta property="og:url" content="http://alferova-web.ru">
     <meta property="og:site" content="http://alferova-web.ru">
  <?php
-    wp_head();
+wp_head();
     ?>
 </head>
+
+<div class="site-container">
 <header class="header">
   <div class="container header__container">
     <div class="header__block">
       <a href="" class="logo header__logo" aria-label="Логотип Alf">
-        <img src="img/logo-mini.svg" alt="Logo Alf">
+        <img src="<?php bloginfo('template_url');?>/assets/img/logo-mini.svg" alt="Logo Alf">
       </a>
 
       <nav class="nav header__nav" title="Navigation">
