@@ -20,17 +20,24 @@ wp_head();
 <header class="header">
   <div class="container header__container">
     <div class="header__block">
-      <a href="" class="logo header__logo" aria-label="Логотип Alf">
-        <img src="<?php bloginfo('template_url');?>/assets/img/logo-mini.svg" alt="Logo Alf">
-      </a>
-
-      <nav class="nav header__nav" title="Navigation">
-        <ul class="list-reset nav__list">
-          <li class="nav__item"><a href="" class="nav__link">Обо мне</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Работы</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Контакты</a></li>
-        </ul>
+     <?php
+      the_custom_logo();
+      ?>
+<nav class="nav header__nav" title="Navigation">
+<?php 
+      $args = array(
+        'theme_location' => 'main',
+        'menu_class' => 'list-reset nav__list',
+        'container' => '',
+        
+        'walker'=> new True_Walker_Nav_Menu()// этот параметр нужно добавить
+       
+       
+      );
+      wp_nav_menu( $args );
+      ?>
       </nav>
+    
       <div class="burger-wrap">
         <button class="burger btn-reset">
           <span class="burger__line"></span>
