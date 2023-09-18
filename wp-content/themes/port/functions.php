@@ -151,3 +151,17 @@ function fix_svg_mime_type( $data, $file, $filename, $mimes, $real_mime = '' ){
 
 	return $data;
 }
+
+add_filter ( 'wp_list_categories', 'span_before_link_list_categories' );
+
+function span_before_link_list_categories( $list ) {
+$list = str_replace('href=', 'class="hero__work" href=',$list);
+return $list;
+}
+
+add_filter ( 'wp_list_categories', 'li_before_link_list_categories' );
+
+function li_before_link_list_categories( $list ) {
+$list = str_replace('<a class=', '<li class="hero__work"><a class=',$list);
+return $list;
+}
