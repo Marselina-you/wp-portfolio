@@ -165,3 +165,21 @@ function li_before_link_list_categories( $list ) {
 $list = str_replace('<a class=', '<li class="hero__work"><a class=',$list);
 return $list;
 }
+function gt_set_post_view() {
+	$key = 'post_views_count';
+	$post_id = get_the_ID();
+	$count = (int) get_post_meta( $post_id, $key, true );
+	$count++;
+	update_post_meta( $post_id, $key, $count );
+}
+function posts_link_next_class($format){
+	$format = str_replace('href=', 'class="post-links__link post-links__link--next" href=', $format);
+	return $format;
+}
+add_filter('next_post_link', 'posts_link_next_class');
+
+function posts_link_prev_class($format) {
+	$format = str_replace('href=', 'class="post-links__link post-links__link--prev" href=', $format);
+	return $format;
+}
+add_filter('previous_post_link', 'posts_link_prev_class');
